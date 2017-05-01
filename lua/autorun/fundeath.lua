@@ -5,7 +5,7 @@ local fun = {
     "garrysmod/save_load4.wav"
 }
 
-local function HappyDeathSounds(ent)
+local function HappyDeathSounds( ent )
 	sound.Play( table.Random( fun ), ent:GetPos(), "75", "100", "1" )
 end
 
