@@ -6,7 +6,7 @@ local fun = {
 }
 
 local function HappyDeathSounds(ent)
-	sound.Play( table.Random(fun), ent:GetPos(), "75", "100", "1" )
+	sound.Play( table.Random( fun ), ent:GetPos(), "75", "100", "1" )
 end
 
 hook.Add( "OnNPCKilled", "NPCHappyDeathSounds", HappyDeathSounds )
