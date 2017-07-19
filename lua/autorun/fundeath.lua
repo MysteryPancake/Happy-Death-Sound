@@ -5,9 +5,9 @@ local fun = {
     "garrysmod/save_load4.wav"
 }
 
-local function HappyDeathSounds( ent )
-	sound.Play( table.Random( fun ), ent:GetPos(), "75", "100", "1" )
+local function happyDeathSounds( ent )
+	sound.Play( fun[ math.random( #fun ) ], ent:GetPos(), "75", "100", "1" )
 end
 
-hook.Add( "OnNPCKilled", "NPCHappyDeathSounds", HappyDeathSounds )
-hook.Add( "PlayerDeath", "PlayerHappyDeathSounds", HappyDeathSounds )
+hook.Add( "OnNPCKilled", "NPCHappyDeathSounds", happyDeathSounds )
+hook.Add( "PlayerDeath", "PlayerHappyDeathSounds", happyDeathSounds )
